@@ -20,12 +20,21 @@ Assumptions:
   - timestamps are UTC
   - sell-side network fees are outlays/expenses
 
+Install deps:
+```
+cpanm DBI DBD::SQLite LWP::UserAgent JSON::PP Text::CSV_XS URI::Escape
+```
+
 Usage:
+```
   export COINAPI_KEY='your_key_here'
   perl btc_cg_estimate.pl transactions1.csv transactions2.csv [...]
+```
 
 Optional env:
+```
   export CG_DB=btc_rates.sqlite
   export DETAIL_CSV=capital_gains_detailed.csv
   export SCHEDULE3_CSV=schedule3_crypto.csv
   export SCHEDULE3_TXT=schedule3_crypto.txt
+```
